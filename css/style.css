@@ -417,6 +417,29 @@ nav, .phone {
     height: auto;
 }
 
+/* Media queries для великих планшетів */
+@media (max-width: 1024px) {
+    .language-banner {
+        height: auto; /* Висота адаптується під вміст */
+        padding: 20px; /* Додаємо відступи для кращого вигляду */
+    }
+
+    .language-banner h2 {
+        font-size: 1.5rem; /* Зменшуємо шрифт заголовка */
+    }
+
+    .language-banner p {
+        font-size: 1rem; /* Зменшуємо шрифт абзаців */
+        margin: 20px -30px 0 -10px; /* Зменшуємо відступи */
+        line-height: 1.4; /* Зменшуємо міжрядковий інтервал */
+    }
+
+    .button_language {
+        font-size: 0.9rem; /* Зменшуємо шрифт кнопок */
+        padding: 8px 15px; /* Зменшуємо відступи кнопок */
+    }
+}
+
 /* Адаптивні стилі для екранів менше 768px */
 @media (max-width: 768px) {
     .language-banner {
@@ -426,16 +449,13 @@ nav, .phone {
         padding: 0;
         margin: 0;
         text-align: center;
-        height: 40em;
-        margin-top: 10%;
-
         margin-top: 80px; /* Встановіть відступ, щоб контент не перекривався заголовком */
         transition: margin-top 0.3s ease; /* Додайте плавний перехід для margin-top */
     }
 
     .text-container {
         text-align: center; /* Вирівнюємо текст по лівому краю */
-        margin: 0 0; /* Центруємо контейнер */
+        margin: 0; /* Центруємо контейнер */
         width: 100%; /* Контейнер займає всю доступну ширину */
         display: flex;
         align-items: stretch;
@@ -452,7 +472,7 @@ nav, .phone {
         width: 100%;
         letter-spacing: 0px;
         text-align: center;
-        line-height:normal;
+        line-height: normal;
         white-space: nowrap;
     }
 
@@ -463,7 +483,6 @@ nav, .phone {
         line-height: 1.5; /* Оптимальний міжрядковий інтервал */
         letter-spacing: normal; /* Стандартний відступ між буквами */
         text-align: left; /* Текст вирівнюється по лівому краю */
-        width: 100%;
         white-space: pre-wrap;
     }
 
@@ -526,6 +545,31 @@ nav, .phone {
 
     .icons {
         display: none; /* Прибираємо іконки на мобільних екранах */
+    }
+}
+
+/* Media queries для дуже малих екранів */
+@media (max-width: 480px) {
+    .language-banner {
+        height: auto; /* Висота адаптується під вміст */
+        padding: 10px; /* Менші відступи для компактності */
+        margin-top: 60px; /* Менший відступ зверху */
+    }
+
+    .language-banner h2 {
+        font-size: 1.2rem; /* Додаткове зменшення шрифту заголовка */
+        margin-bottom: -10px; /* Зменшуємо відступ знизу */
+    }
+
+    .language-banner p {
+        font-size: 0.9rem; /* Зменшення шрифту для абзаців */
+        margin: 20px -20px 0 -10px; /* Зменшені відступи */
+        line-height: 1.3; /* Зменшений міжрядковий інтервал */
+    }
+
+    .button_language {
+        font-size: 0.8rem; /* Зменшення шрифту кнопок */
+        padding: 5px 10px; /* Зменшені відступи кнопок */
     }
 }
 
@@ -640,7 +684,32 @@ nav, .phone {
 .icon-4 { bottom: -20%; left: -50px; }
 .icon-5 { top:-25%; right: 15em;}
 
-/*Адаптація Безкоштовного уроку*/
+/* Media queries для великих планшетів */
+@media (max-width: 1024px) {
+    .free-lesson {
+        padding: 30px; /* Збільшені відступи для кращого вигляду */
+    }
+
+    .free-lesson h1 {
+        font-size: 1.6rem; /* Зменшення розміру заголовка для планшетів */
+    }
+
+    .free-lesson p {
+        font-size: 0.9rem; /* Зменшення шрифту для абзаців */
+        margin: 15px 0; /* Зменшені відступи */
+    }
+
+    .free-lesson .image-container {
+        display: block; /* Відображаємо іконки на планшетах */
+        margin: 15px 0; /* Додаємо відступи */
+    }
+
+    .free-lesson .button {
+        width: 80%; /* Кнопка займає більшу частину контейнера */
+    }
+}
+
+/* Адаптація Безкоштовного уроку */
 @media (max-width: 768px) {
     .free-lesson {
         flex-direction: column; /* Вирівнюємо всі елементи вертикально */
@@ -674,6 +743,27 @@ nav, .phone {
         margin-top: 10px; /* Відступ між текстом і кнопкою */
     }
 }
+
+/* Media queries для дуже малих екранів */
+@media (max-width: 480px) {
+    .free-lesson {
+        padding: 15px; /* Менші відступи для компактності */
+    }
+
+    .free-lesson h1 {
+        font-size: 1.4rem; /* Додаткове зменшення шрифту заголовка */
+    }
+
+    .free-lesson p {
+        font-size: 0.8rem; /* Зменшення шрифту для абзаців */
+        margin: 10px 0; /* Зменшені відступи */
+    }
+
+    .free-lesson .button {
+        width: 100%; /* Кнопка займає всю ширину контейнера */
+    }
+}
+
 
 
 
@@ -739,6 +829,28 @@ nav, .phone {
     margin: 0; /* Відсутність додаткових відступів для параграфа */
 }
 
+/* Media queries для великих планшетів */
+@media (max-width: 1024px) {
+    .learning-grid {
+        grid-template-columns: repeat(2, 1fr); /* Два стовпці для великих планшетів */
+    }
+    
+    .learning-item {
+        flex-direction: row; /* Горизонтальне вирівнювання елементів */
+        text-align: left; /* Вирівнювання тексту зліва */
+    }
+    
+    .learning-item img {
+        margin-bottom: 0; /* Скидання нижнього відступу */
+        width: 100px; /* Збільшений розмір зображення для планшетів */
+        height: auto; /* Автоматичне збереження пропорцій */
+    }
+    
+    .learning-text {
+        align-items: flex-start; /* Вирівнюємо текст на верхній край */
+    }
+}
+
 /* Media queries для мобільних пристроїв */
 @media (max-width: 768px) {
     .learning-grid {
@@ -761,6 +873,29 @@ nav, .phone {
         align-items: center;
     }
 }
+
+/* Media queries для дуже малих екранів */
+@media (max-width: 480px) {
+    .learning-grid {
+        grid-template-columns: 1fr; /* Один стовпець для дуже малих екранів */
+    }
+    
+    .learning-item {
+        flex-direction: column; /* Вертикальне вирівнювання елементів */
+        text-align: center; /* Центруємо текст */
+    }
+    
+    .learning-item img {
+        margin-bottom: 5px; /* Зменшений відступ між картинкою і текстом на дуже малих екранах */
+        width: 70px; /* Зменшений розмір зображення для дуже малих екранів */
+        height: 70px; /* Зберігаємо пропорції */
+    }
+    
+    .learning-text {
+        align-items: center; /* Центруємо текст */
+    }
+}
+
 
 
 
@@ -887,72 +1022,455 @@ nav, .phone {
     text-align: left;
 }
 
+/* Адаптивність для секції переваг */
+/* Медіа-запити для планшетів */
+@media (max-width: 1024px) {
+    .advantages-header {
+        flex-direction: column; /* Заголовок і стрілки в колонку */
+        justify-content: center; /* Центрування */
+        text-align: center; /* Вирівнювання тексту по центру */
+        margin-bottom: 20px; /* Зменшення відступів */
+    }
 
+    .advantages h1 {
+        font-size: 28px; /* Зменшення розміру заголовка */
+        margin: 0 2em;
+    }
 
+    .arrows-container {
+        margin-bottom: 20px; /* Додатковий відступ між стрілками і текстом */
+    }
 
-/* СТИЛІ ДЛЯ СЕКЦІЇ ЦІНА */
-.price-section {
-    display: flex;
-    justify-content: center; /* Центрування секції */
-    align-items: center; /* Вертикальне вирівнювання */
-    padding: 40px; /* Внутрішні відступи */
-    background: linear-gradient(90deg, #92BCCA 0%, #37798F 100%);
-    border-radius: 35px;
-    width: 70%;
+    .advantages-content {
+        max-width: 70%; /* Збільшення ширини тексту для більшої читабельності */
+        font-size: 16px; /* Зменшення розміру тексту */
+    }
+
+    .line {
+        width: 20em; /* Зменшення ширини лінії */
+    }
+
+    .advantages-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Оптимізація колонок */
+        gap: 20px; /* Зменшення відстані між колонками */
+        padding: 10px; /* Зменшення відступів */
+    }
+
+    .advantage-item {
+        padding: 15px; /* Зменшення відступів */
+        font-size: 14px; /* Зменшення шрифту */
+    }
+
+    .advantage-item h3 {
+        font-size: 20px; /* Зменшення розміру заголовка */
+    }
+
+    .advantage-item ul {
+        font-size: 14px; /* Зменшення розміру шрифту для списків */
+    }
+
+    .advantage-item img {
+        min-height: 50px;
+        width: 50px; /* Зменшення розміру зображень */
+    }
 }
 
+/* Медіа-запити для мобільних пристроїв */
+@media (max-width: 768px) {
+    .advantages-header {
+        flex-direction: column; /* Перехід до вертикального розташування заголовка і стрілок */
+        margin-bottom: 15px; /* Менший відступ */
+    }
+
+    .advantages h1 {
+        font-size: 24px; /* Зменшення заголовка для мобільних */
+        margin: 0 1em; /* Зменшення полів */
+    }
+
+    .arrows-container {
+        flex-direction: column; /* Стрілки одна під одною */
+        justify-content: center;
+    }
+
+    .arrow {
+        margin: 10px 0; /* Відстань між стрілками по вертикалі */
+        width: 40px; /* Зменшення розміру стрілок */
+    }
+
+    .advantages-content {
+        max-width: 90%; /* Максимальна ширина тексту */
+        font-size: 14px; /* Зменшення розміру шрифту */
+    }
+
+    .line {
+        width: 15em; /* Зменшення ширини лінії */
+        margin: 0 auto; /* Центрування лінії */
+    }
+
+    .advantages-grid {
+        grid-template-columns: 1fr; /* Одна колонка для мобільних */
+        gap: 15px; /* Зменшення відстані між елементами */
+    }
+
+    .advantage-item {
+        padding: 10px; /* Зменшення внутрішніх відступів */
+    }
+
+    .advantage-item h3 {
+        font-size: 18px; /* Зменшення заголовка */
+    }
+
+    .advantage-item ul {
+        font-size: 12px; /* Зменшення розміру списків */
+    }
+
+    .advantage-item img {
+        min-height: 40px;
+        width: 40px; /* Зменшення зображень */
+    }
+}
+
+/* Медіа-запити для дуже малих екранів */
+@media (max-width: 480px) {
+    .advantages-header {
+        margin-bottom: 10px; /* Зменшення відступу */
+    }
+
+    .advantages h1 {
+        font-size: 20px; /* Заголовок ще менший для маленьких екранів */
+        margin: 0 0.5em; /* Менший відступ для заголовка */
+    }
+
+    .arrows-container {
+        display: none; /* Вимкнення стрілок для дуже малих екранів */
+    }
+
+    .advantages-content {
+        max-width: 100%; /* Текст на всю ширину */
+        font-size: 12px; /* Маленький текст */
+    }
+
+    .line {
+        display: none; /* Приховуємо лінію для мобільних */
+    }
+
+    .advantages-grid {
+        gap: 10px; /* Ще менші відстані між елементами */
+    }
+
+    .advantage-item {
+        padding: 8px; /* Зменшення відступів */
+        font-size: 12px; /* Зменшення шрифтів */
+    }
+
+    .advantage-item h3 {
+        font-size: 16px; /* Заголовки ще менші */
+    }
+
+    .advantage-item ul {
+        font-size: 10px; /* Дуже маленькі списки */
+    }
+
+    .advantage-item img {
+        min-height: 35px;
+        width: 35px; /* Зменшення зображень */
+    }
+}
+
+
+/* ЗАГАЛЬНІ СТИЛІ ДЛЯ ЦІНА*/
+.price-section {
+    background: linear-gradient(90deg, #92BCCA 0%, #37798F 100%);
+    border-radius: 35px;
+    padding: 30px;
+    margin: 2% 17%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Стиль для картки з ціною */
 .price-card {
     background: #FFFFFF;
     border-radius: 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь для об'єму */
-    padding: 30px; /* Внутрішні відступи для картки */
-    margin: 0;
-    width: 90%;
+    width: 85%;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Центрування заголовку і логотипу */
+.header-content {
+    display: flex;
+    flex-direction: row; /* Вирівнюємо елементи вертикально */
+    justify-content: center; /* Центрування по горизонталі */
+    align-items: center; /* Центрування по вертикалі */
+    text-align: center;
+}
+
+.header-content img {
+    width: 80px;
     height: auto;
-    text-align: center; /* Центрування тексту */
-    position: relative; /* Для абсолютного позиціонування елементів */
-    display: flex; /* Додаємо flex для картки */
-    flex-direction: row; /* Розташування елементів у колонку */
+    margin-top: -35px;
+    margin-left: 10px;
 }
 
-.price-card h2 {
-    font-size: 28px; /* Розмір заголовка */
-    margin: 0 0 10px; /* Відступи */
+/* Флексбокс з трьома колонками для деталей ціни */
+.price-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    align-content: flex-start;
+    align-items: center;
 }
 
+.column {
+    flex: 1; /* Кожна колонка займає однаковий простір */
+    text-align: center; /* Вирівнювання тексту зліва */
+}
+
+/* Стилі для кожного текстового блоку */
 .subtitle {
-    font-size: 16px; /* Розмір підзаголовка */
-    color: #666; /* Колір тексту */
-    margin-bottom: 20px; /* Відступи */
+    color: rgb(51, 51, 51);
+
+    font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    font-style: normal;
 }
 
-.price {
-    font-size: 48px; /* Розмір ціни */
-    font-weight: bold; /* Жирний шрифт */
-    color: #333; /* Колір тексту */
+/* Вирівнювання блоку з ціною */
+.price-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -50px;
 }
 
+/* Стиль для ціни */
+.price { 
+    color: #000000;
+    font-weight:bolder;
+
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+/* Стиль для "грн" */
 .price span {
-    font-size: 24px; /* Розмір для гривень */
-    color: #666; /* Колір для підпису */
+    font-size: 20px;
+    color: #666;
+    font-weight:bolder;
+    align-self: flex-end;
+    display:block;  
+    margin-top: -60px; 
+    margin-left: 120px; 
 }
 
+/* Стиль для "за урок" */
 .per-lesson {
-    font-size: 18px; /* Розмір тексту для інформації про уроки */
-    color: #666; /* Колір тексту */
-    margin-top: 10px; /* Відступи */
+    font-size: 18px;
+    color: #666;
+    align-self: flex-end; 
+    margin-bottom: 0;
+    margin-left: -32px;
 }
 
-.icon {
-    font-size: 30px; /* Розмір значка */
-    display: block; /* Для нового рядка */
-    margin: 20px auto; /* Центрування значка */
+.price-details .column:nth-child(3) { 
+    display: flex;            /* Зробити колонку флекс-контейнером */
+    justify-content: center; /* Вирівняти все по правому краю */
+    text-align: center;       /* Вирівнює текст всередині, якщо потрібно */
 }
 
 .additional-info {
-    font-size: 14px; /* Розмір додаткової інформації */
-    color: #999; /* Колір тексту */
-    margin-top: 10px; /* Відступи */
+    width: 50%;
+    height: auto;
+
+    background: rgba(217, 217, 217, 0.48);
+    border-radius: 70px;
+
+    font-size: 14px;
+    color: #999;
+    margin-top: 10px;
+}
+ 
+/* Адаптивність для планшетів */
+@media (max-width: 1024px) {
+    .price-section {
+        margin: 2% 5%; /* Менші відступи */
+        padding: 20px; /* Зменшені відступи для компактності */
+    }
+
+    .price-card {
+        width: 100%; /* Повна ширина на планшетах */
+        padding: 20px; /* Зменшити відступи всередині картки */
+    }
+
+    .price-details {
+        flex-direction: column; /* Вертикальне розташування колонок */
+        align-items: center; /* Центрування */
+        gap: 15px; /* Відстань між елементами */
+    }
+
+    .column {
+        width: 100%; /* Задаємо ширину 100% для колонок */
+        text-align: center; /* Вирівнювання тексту по центру */
+        margin-bottom: 10px; /* Відступ між колонками */
+    }
+
+    .price {
+        font-size: 32px; /* Зменшити розмір шрифту для планшетів */
+    }
+
+    .price span {
+        font-size: 20px; /* Зменшити розмір шрифту для гривень */
+    }
+
+    .subtitle {
+        font-size: 16px; /* Зменшити розмір шрифту для підзаголовків */
+    }
+
+    .per-lesson {
+        font-size: 16px; /* Зменшити розмір шрифту для "за урок" */
+    }
+
+    .additional-info {
+        font-size: 12px; /* Зменшити розмір шрифту для додаткової інформації */
+    }
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 768px) {
+    .price-section {
+        margin: 2% 5%; /* Менші відступи */
+        padding: 20px; /* Зменшені відступи для компактності */
+    }
+
+    .price-card {
+        width: 100%; /* Повна ширина на мобільних пристроях */
+        padding: 20px; /* Зменшити відступи всередині картки */
+    }
+
+    .price-details {
+        flex-direction: column; /* Вертикальне розташування колонок */
+        align-items: center; /* Центрування */
+        gap: 15px; /* Відстань між елементами */
+    }
+
+    .column {
+        width: 100%; /* Задаємо ширину 100% для колонок */
+        text-align: center; /* Вирівнювання тексту по центру */
+        margin-bottom: 10px; /* Відступ між колонками */
+    }
+
+    .price {
+        font-size: 32px; /* Зменшити розмір шрифту для мобільних */
+    }
+
+    .price span {
+        font-size: 20px; /* Зменшити розмір шрифту для гривень */
+    }
+
+    .subtitle {
+        color: #333;
+    
+        font-size: 20px;
+        letter-spacing: 2px;
+        line-height: 0px;
+    }
+
+    .per-lesson {
+        font-size: 16px; /* Зменшити розмір шрифту для "за урок" */
+    }
+
+    .additional-info {
+        font-size: 12px; /* Зменшити розмір шрифту для додаткової інформації */
+    }
+}
+
+/* Адаптивність для дуже малих екранів */
+@media (max-width: 480px) {
+    .price-section {
+        margin: 2% 2%; /* Ще менші відступи */
+        padding: 15px; /* Зменшені відступи для компактності */
+    }
+
+    .price-card {
+        width: 100%; /* Повна ширина на дуже малих пристроях */
+        padding: 15px; /* Зменшити відступи всередині картки */
+    }
+
+    .header-content h2{
+        font-size: 25px;
+    }
+
+    .header-content img{
+        width: 60px;
+        height: auto;
+    }
+
+
+    .price-details {
+        flex-direction: column; /* Вертикальне розташування колонок */
+        align-items: center; /* Центрування */
+        gap: 10px; /* Відстань між елементами */
+        
+    }   
+
+    .column {
+        width: 100%; /* Задаємо ширину 100% для колонок */
+        text-align: center; /* Вирівнювання тексту по центру */
+        margin-bottom: 40px; /* Відступ між колонками */
+    }
+
+    .subtitle {
+        color: #333;
+    
+        font-size: 20px;
+        letter-spacing: 2px;
+        line-height: 0px;
+    }
+
+    .price-container{
+        font-weight: bolder;
+    }
+    
+    .price {
+        font-weight: bolder;
+        font-size: 30px; /* Зменшити розмір шрифту для дуже малих екранів */
+    }
+
+    .price span {
+        font-size: 15px; /* Зменшити розмір шрифту для гривень */
+        font-weight:bolder;
+        align-self: flex-end;
+        display:block;  
+        margin-top: -45px; 
+        margin-left: 100px; 
+    }
+
+    .per-lesson{
+        color: #000000;
+        font-style: italic;
+        font-weight:500;
+        margin-bottom: 5px;
+        margin-left: -30px;
+    }
+    
+    .subtitle {
+        font-size: 14px; /* Зменшити розмір шрифту для підзаголовків */
+    }
+
+    .per-lesson {
+        font-size: 14px; /* Зменшити розмір шрифту для "за урок" */
+    }
+
+    .additional-info {
+        font-size: 20px; /* Зменшити розмір шрифту для додаткової інформації */
+    }
 }
 
 
