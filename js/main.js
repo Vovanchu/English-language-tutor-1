@@ -1,22 +1,30 @@
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('header'); // Знайдіть заголовок
-    const scrollPosition = window.scrollY; // Отримати позицію прокрутки
-
-    if (scrollPosition > 0) {
-        header.classList.add('transparent'); // Додати клас при прокручуванні
-    } else {
-        header.classList.remove('transparent'); // Видалити клас, коли на верхній позиції
-    }
-})
-
-// Функція для перемикання видимості навігаційного меню
+//  Функція для перемикання видимості навігаційного меню
 function toggleMenu() {
-    const nav = document.querySelector('nav'); // Знайти навігаційне меню
-    const hamburger = document.getElementById('hamburger'); // Знайти гамбургер
+    const hamburger = document.getElementById("hamburger");
+    const nav = document.getElementById("nav");
 
-    nav.classList.toggle('active'); // Додати або видалити клас 'active' для навігації
-    hamburger.classList.toggle('active'); // Додати або видалити клас 'active' для гамбургера
+    nav.classList.toggle("active"); // Змінюємо клас для навігації
+    hamburger.classList.toggle("active"); // Змінюємо клас для гамбургера
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger");
+
+    // Додайте обробник подій для гамбургера
+    hamburger.addEventListener("click", toggleMenu);
+
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header'); // Знайдіть заголовок
+        const scrollPosition = window.scrollY; // Отримати позицію прокрутки
+
+        if (scrollPosition > 0) {
+            header.classList.add('transparent'); // Додати клас при прокручуванні
+        } else {
+            header.classList.remove('transparent'); // Видалити клас, коли на верхній позиції
+        }
+    });
+});
+
 
 // Отримуємо всі кнопки для зміни мови
 const languageButtons = document.querySelectorAll('.button_language');
