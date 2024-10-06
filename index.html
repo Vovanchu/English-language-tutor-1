@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="css/style.css?v=1.0"/>
     <title>Репетиторство Онлайн</title>
   </head>
   <body>
+
     <header>
       <div class="logo">
         <img src="/img/лого.png" alt="Логотип" />
@@ -24,7 +25,7 @@
       <div class="phone">
         <a href="tel:0672903393">
           <div class="phone-icon">
-            <img src="/img/phone.svg" alt="Phone Icon" />
+            <img src="/img/phone.png" alt="Phone Icon" />
           </div>
           <span>067 290 33 93</span>
         </a>
@@ -50,7 +51,7 @@
         <button class="button_language">Для діток</button>
         <button class="button_language">Для дорослих</button>
         <div class="icons">
-          <img src="/img/children-icon.svg" alt="Іконка для діток" />
+          <img src="/img/children-icon.png" alt="Іконка для діток" />
         </div>
       </div>
     </section>
@@ -206,15 +207,37 @@
   
     <section class="price-section" id="prices">
       <div class="price-card">
+        <!-- Центрований заголовок та логотип -->
+        <div class="header-content">
           <h2>Вартість уроків</h2>
-          <p class="subtitle">Індивідуальні заняття</p>
-          <p class="price">370 <span>грн</span></p>
-          <p class="per-lesson">за урок</p>
-          <span class="icon">🏠</span> <!-- Замініть на ваше зображення або значок -->
-          <p class="additional-info">55 хв/урок</p>
+          <img src="/img/лого.png" alt="Логотип">
+        </div>
+        
+        <!-- Флексбокс з трьома колонками -->
+        <div class="price-details">
+
+          <div class="column">
+            <p class="subtitle">Індивідуальні</p>
+            <p class="subtitle">заняття</p>
+          </div>
+
+          <div class="column">
+            <div class="price-container">
+              <p class="price">370 
+                <span>грн</span>
+              </p>
+              <p class="per-lesson">за урок</p>
+            </div>
+          </div>
+
+          <div class="column">
+            <p class="additional-info">55 хв/урок</p>
+          </div>
+          
+        </div>
       </div>
-    </section>  
-  
+    </section>
+    
 
     <section id="about">
       <a href="javascript:void(0);" class="button" onclick="openModal('become')"
