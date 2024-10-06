@@ -368,7 +368,7 @@ nav, .phone {
 
 /* Стилі для кнопки при наведенні */
 .button_language:hover {
-    background-color: #ffcf93; /* Колір при наведенні */
+    background-color: #92BCCA; /* Колір при наведенні */
     transform: scale(1.05); /* Збільшуємо кнопку при наведенні */
 }
 
