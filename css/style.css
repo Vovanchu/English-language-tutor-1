@@ -1,0 +1,1070 @@
+/* Основні стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/*СТИЛІ ДЛЯ ГОЛОВА*/ 
+header {
+    display: flex;
+    justify-content: flex-end; /* Вирівнювання всіх елементів справа */
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Зміна позиції на фіксовану */
+    top: 0; /* Вирівнювання зверху */
+    left: 0; /* Вирівнювання зліва */
+    right: 0; /* Вирівнювання справа */
+    background-color: rgba(146, 188, 202, 1); /* Колір фону */
+    transition: background-color 0.5s ease; /* Плавний перехід для фону */
+    z-index: 1000; /* Щоб заголовок був поверх інших елементів */
+}
+
+/* Додайте новий клас для прозорого фону */
+header.transparent {
+    background-color: rgba(146, 188, 202, 0.8); /* Прозорий фон */
+}
+
+header.transparent + .language-banner {
+    margin-top: 190px; /* Менший відступ, коли заголовок прозорий */
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+    position: absolute; /* Додаємо, щоб розмістити логотип зліва */
+    left: 20px; /* Вирівнювання зліва */
+}
+
+.logo img {
+    width: 40px;
+    height: auto;
+}
+
+.logoIzi {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #1B3955; /* Колір для слова "Izi" */
+}
+
+.logo span {
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+nav {
+    display: flex; /* Відображення навігації на великих екранах */
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul {
+    display: flex; /* Відображення списку в горизонтальному режимі */
+    list-style: none; /* Скидання маркерів */
+    padding: 0; /* Скидання відступів */
+    margin: 0; /* Скидання відстані */
+}
+
+/* Основні стилі навігації */
+nav a {
+    text-decoration: none; /* Без підкреслення */
+    color: #1B3955; /* Колір тексту */
+    font-size: 1rem; /* Розмір шрифту */
+    font-weight: bold; /* Жирний текст */
+    padding: 10px 15px; /* Внутрішні відступи */
+    border-radius: 4px; /* Закруглені кути */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Плавні переходи */
+}
+
+/* Анімація при наведенні */
+nav a:hover {
+    background-color: #f0f0f0; /* Колір фону при наведенні */
+    color: #1B3955; /* Можливий новий колір тексту */
+    transform: scale(1.1); /* Легке збільшення посилання */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тінь для більшої виразності */
+}
+
+nav, .phone {
+    display: flex;           /* Використовуємо flexbox для горизонтального розміщення */
+    align-items: center;     /* Центруємо елементи по вертикалі */
+    gap: 20px;               /* Відстань між елементами */
+}
+
+.phone {
+    font-size: 1.125rem;     /* Розмір шрифту */
+    color: #000;             /* Колір тексту */
+    transition: color 0.3s ease; /* Додаємо перехід для кольору тексту */
+}
+
+.phone-icon {
+    display: flex;           /* Вирівнюємо іконку телефону по центру */
+    align-items: center;     /* Центруємо іконку по вертикалі */
+    transition: transform 0.3s ease; /* Додаємо перехід для трансформації */
+}
+
+.phone-icon img {
+    display: block;          /* Відображаємо як блок */
+    width: 1.7rem;          /* Ширина іконки */
+    height: auto;           /* Автоматична висота */
+    transition: transform 0.3s ease; /* Додаємо перехід для трансформації */
+}
+
+.phone a {
+    display: flex;          /* Використовуємо flexbox для контейнера посилання */
+    align-items: center;    /* Центруємо текст та іконку по вертикалі */
+    text-decoration: none;  /* Без підкреслення */
+    color: #000;            /* Колір тексту */
+}
+
+.phone a:hover {
+    color: #007BFF;         /* Зміна кольору тексту при наведенні */
+}
+
+.phone-icon:hover img {
+    transform: scale(1.1);  /* Збільшуємо іконку на 10% при наведенні */
+}
+
+.phone span {
+    margin-left: 0.5em;     /* Відстань між іконкою та номером */
+    transition: color 0.3s ease, transform 0.3s ease; /* Додаємо перехід для кольору та трансформації */
+}
+
+/* Зміна кольору тексту номера телефону при наведенні */
+.phone a:hover span {
+    color: #007BFF;         /* Зміна кольору номера телефону при наведенні */
+    transform: scale(1.2);  /* Збільшуємо номер телефону на 20% при наведенні */
+}
+
+.hamburger {
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+}
+
+.hamburger div {
+    background-color: #000;
+    height: 4px;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active {
+    transform: rotate(0deg);
+}
+
+.hamburger.active div:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        display: none; /* Ховати навігацію за замовчуванням */
+        flex-direction: column; /* Вертикальне вирівнювання */
+        position: absolute;
+        top: 60px; /* Відстань від верху */
+        right: 20px; /* Відстань від правого краю */
+        background-color: #fff; /* Колір фону меню */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тінь меню */
+        padding: 10px; /* Внутрішній відступ */
+        border-radius: 5px; /* Закруглені кути */
+        z-index: 1000; /* Щоб меню було поверх інших елементів */
+    }
+
+    nav.active {
+        display: flex; /* Показати навігацію, коли активна */
+    }
+
+    nav ul {
+        flex-direction: column; /* Вертикальне вирівнювання списку */
+        width: 100%; /* Ширина списку на мобільних пристроях */
+    }
+
+    nav a {
+        padding: 10px; /* Відстань навколо тексту */
+        text-align: center; /* Вирівнювання тексту по центру */
+        border-bottom: 1px solid #ddd; /* Лінія розділу */
+        display: block; /* Робимо посилання блочними */
+        color: #333; /* Колір тексту */
+        background-color: #fff; /* Колір фону за замовчуванням */
+        transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease; /* Плавні переходи */
+    }
+    
+    nav a:hover {
+        background-color: #333; /* Темніший колір фону при наведенні */
+        color: #fff; /* Колір тексту при наведенні */
+        transform: scale(1.05); /* Легке збільшення при наведенні */
+    }    
+    
+    .hamburger {
+        display: block; /* Зробіть видимим гамбургер */
+        position: relative;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        margin-left: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .hamburger div {
+        background-color: #000; /* Колір ліній гамбургера */
+        height: 4px; /* Висота лінії */
+        margin: 4px 0; /* Відстань між лініями */
+        transition: all 0.3s ease;
+    }
+
+    .hamburger.active {
+        transform: rotate(0deg);
+    }
+
+    .hamburger.active div:nth-child(1) {
+        transform: translateY(10px) rotate(45deg); /* Перетворення першої лінії */
+    }
+
+    .hamburger.active div:nth-child(2) {
+        opacity: 0; /* Середня лінія зникає */
+    }
+
+    .hamburger.active div:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg); /* Перетворення третьої лінії */
+    }
+
+    .phone {
+        font-size: 1.2rem; /* Розмір шрифту */
+        display: flex; /* Вирівнюємо елементи по центру */
+        align-items: center; /* Центруємо елементи по вертикалі */
+    }
+
+    .phone a { 
+        display: flex; /* Вирівнюємо іконку з текстом */
+        align-items: center;
+    }
+
+    .phone a span { 
+        margin-right: 10px; /* Відстань між іконкою та текстом */
+    }
+
+    .phone a::after { 
+        content: ""; /* Приховуємо цифри телефону */
+        display: none;
+    }
+
+    .phone a {
+        justify-content: center; /* Центруємо іконку на мобільних пристроях */
+        font-size: 0; /* Прибираємо цифри, не порушуючи структури посилання */
+    }
+
+    .phone a span {
+        display: inline-block; /* Іконка залишається */
+    }
+
+    .phone a span img {
+        width: 24px; /* Розмір SVG іконки */
+        height: auto;
+    }
+}
+
+
+
+
+
+
+/*СТИЛІ ДЛЯ АНГЛІЙСЬКА ДЛЯ ВСІХ*/
+.language-banner {
+    background: linear-gradient(90deg, #1C6E5B 0%, #43B99E 100%);
+    border-radius: 30px;
+    padding: 20px;
+    display: flex; /* Використовуємо флекс для розташування елементів */
+    justify-content: space-between; /* Вирівнюємо текст зліва, кнопки справа */
+    align-items: flex-start; /* Вирівнюємо по верхньому краю */
+    max-width: 1000px;
+    margin: 20px auto;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+    margin-top: 80px; /* Встановіть відступ, щоб контент не перекривався заголовком */
+    transition: margin-top 1.0s ease; /* Додайте плавний перехід для margin-top */
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Зменшений відступ між абзацами */
+    width: 100%;
+    max-width: 550px; /* Контроль ширини контейнера */
+    text-align: center; /* Вирівнюємо текст по центру */
+}
+
+.language-banner h2 {
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    margin-left: -60px;
+    color: #EEEFF5;
+    max-width: 100%; /* Додаємо контроль ширини */
+    line-height: 0.6; /* Зменшений інтервал між рядками в заголовку */
+    white-space: pre-wrap; /* Забезпечує перенесення тексту на новий рядок */
+    text-align: center;
+    
+    letter-spacing: 3px;
+}
+
+.language-banner p {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    margin-left: 60px;
+    line-height: 1.3;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    text-align:start;   
+
+    color: #FFFFFF;
+}
+
+.buttons-container {
+    display: flex; /* Включаємо Flexbox */
+    flex-direction: column; /* Вирівнюємо елементи по вертикалі */
+    align-items: flex-start; /* Вирівнюємо елементи по лівому краю */
+    position: relative; /* Задаємо відносне позиціонування для подальшого використання top/right */
+}
+
+.buttons-container button {
+    position: absolute; /* Додаємо позиціювання */
+}
+
+.button_language {
+    background-color: #fef4e6; /* Колір кнопок */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer; /* Змінюємо на 'pointer' для вказівника курсора */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    width: 100%; /* Задайте ширину 100% */
+    max-width: 10rem; /* Максимальна ширина кнопки */
+    margin-bottom: 20px; /* Відступ між кнопками */
+    width: 10rem; /* Ширина кнопки */
+}
+
+/* Стилі для кнопки при наведенні */
+.button_language:hover {
+    background-color: #ffcf93; /* Колір при наведенні */
+    transform: scale(1.05); /* Збільшуємо кнопку при наведенні */
+}
+
+/* Стилі для кнопки після натискання */
+.button_language.active {
+    background-color: #ffcf93; /* Колір при натисканні */
+    animation: fadeBack 2s forwards; /* Анімація повернення кольору */
+}
+
+/* Анімація повернення до початкового кольору */
+@keyframes fadeBack {
+    0% {
+        background-color: #ffcf93; /* Колір при натисканні */
+    }
+    100% {
+        background-color: #fef4e6; /* Початковий колір */
+    }
+}
+
+.buttons-container button:first-child {
+    top: 4em; /* Відстань від верхньої частини контейнера */
+    right: 15em;
+    width: 10rem;
+    height: 3em;
+    border: 1px solid #FFF1EC;
+    border-radius: 70px;
+}
+
+.buttons-container button:nth-child(2) {
+    right: 5em;
+    top: 11em;
+    width: 10rem; 
+    height: 3em;
+    border: 1px solid #FFF1EC;
+    border-radius: 70px;
+}
+
+.icons {
+    margin-top: 20px;
+    margin-right: 100px; /* Відступ між кнопками та іконкою */
+}
+
+.icons img {
+    right: 5em;
+    width: 150px;
+    height: auto;
+}
+
+/* Адаптивні стилі для екранів менше 768px */
+@media (max-width: 768px) {
+    .language-banner {
+        flex-direction: column; /* Вирівнюємо всі елементи вертикально */
+        align-items: center; /* Центруємо всі елементи по горизонталі */
+        height: auto; /* Висота контейнера змінюється в залежності від вмісту */
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        height: 40em;
+        margin-top: 10%;
+
+        margin-top: 80px; /* Встановіть відступ, щоб контент не перекривався заголовком */
+        transition: margin-top 0.3s ease; /* Додайте плавний перехід для margin-top */
+    }
+
+    .text-container {
+        text-align: center; /* Вирівнюємо текст по лівому краю */
+        margin: 0 0; /* Центруємо контейнер */
+        width: 100%; /* Контейнер займає всю доступну ширину */
+        display: flex;
+        align-items: stretch;
+        align-content: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .language-banner h2 {
+        font-size: 1.8rem; 
+        margin-bottom: -20px;
+        margin-left: 5px;
+        padding: 0;
+        width: 100%;
+        letter-spacing: 0px;
+        text-align: center;
+        line-height:normal;
+        white-space: nowrap;
+    }
+
+    .language-banner p {
+        font-size: 1.1rem;
+        margin: 30px -50px 0 -20px;
+        width: 100%; /* Текст займає всю ширину контейнера */
+        line-height: 1.5; /* Оптимальний міжрядковий інтервал */
+        letter-spacing: normal; /* Стандартний відступ між буквами */
+        text-align: left; /* Текст вирівнюється по лівому краю */
+        width: 100%;
+        white-space: pre-wrap;
+    }
+
+    .buttons-container {
+        display: flex; /* Включаємо Flexbox */
+        flex-direction: column; /* Вирівнюємо елементи по вертикалі */
+        align-items: flex-start; /* Вирівнюємо елементи по лівому краю */
+        width: 100%; /* Контейнер кнопок займає всю ширину */
+        margin-top: 20px; /* Додаємо відступ зверху */
+    }
+
+    .button_language {
+        background-color: #fef4e6; /* Колір кнопок */
+        border: none;
+        border-radius: 25px;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #333;
+        cursor: pointer; /* Змінюємо на 'pointer' для вказівника курсора */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
+        width: 100%;
+        min-width: 5rem;
+        max-width: 45rem; /* Збільшено максимальну ширину кнопки */
+    }
+    
+    .buttons-container button {
+        position: absolute;
+        width: 100%; /* Кнопки займають всю ширину контейнера */
+        max-width: 12rem; /* Збільшено максимальну ширину кнопки */
+        padding: 10px 20px;
+        margin-bottom: 10px; /* Відступ між кнопками */
+    }
+
+    /* Стилі для кнопки при наведенні */
+    .button_language:hover {
+        background-color: #ffcf93; /* Колір при наведенні */
+        transform: scale(1.05); /* Збільшуємо кнопку при наведенні */
+    }
+    
+    .buttons-container button:first-child {
+        border: 1px solid #FFF1EC;
+        border-radius: 70px;
+        top: -15em;
+        left: 2em;
+        width: 90%; /* Кнопки займають всю ширину контейнера */
+        min-width: 5rem;
+        max-width: 45rem; /* Збільшено максимальну ширину кнопки */
+    }
+    
+    .buttons-container button:nth-child(2) {
+        border: 1px solid #FFF1EC;
+        border-radius: 70px;
+        top: -10em;
+        left: 2em;
+        width: 90%; /* Кнопки займають всю ширину контейнера */
+        min-width: 5rem;
+        max-width: 45rem; /* Збільшено максимальну ширину кнопки */
+    }    
+
+    .icons {
+        display: none; /* Прибираємо іконки на мобільних екранах */
+    }
+}
+
+
+
+
+
+
+/*СТИЛІ ДЛЯ БЕЗКОШТОВНОГО НАВЧАННЯ*/
+.free-lesson {
+    position: relative; /* Відносне позиціонування для контейнера */
+    padding: 40px;
+    background-color: #FFF8E0;
+    border-radius: 20px;
+    color: #333;
+    margin: 100px auto 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between; /* Вирівнювання між блоками тексту і кнопки */
+    align-items: center; /* Вирівнювання по вертикалі */
+}
+
+.free-lesson h1 {
+    text-align: left;
+
+    font-size: 2rem;
+    margin-bottom: 20px;
+
+    font-style: normal;
+    font-weight: bolder;
+    line-height: 50px;
+
+    color: #000000;
+}
+
+.free-lesson p {
+    text-align: left;
+
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight:600;
+
+    color: #000000;
+}
+
+.free-lesson p:first-child{
+    margin-bottom: -20px;
+}
+
+.free-lesson p:last-child{
+    margin-top: -20px;
+}
+
+/* Контейнер для тексту */
+.text-container {
+    max-width: 60%; /* Обмеження ширини текстового контейнера */
+}
+
+/* Контейнер для кнопки */
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Вирівнювання кнопки праворуч */
+    width: 40%; /* Встановлення ширини для контейнера */
+}
+
+.free-lesson .button {
+    /* Вирівнювання та центровання */
+    display: inline-flex;               /* Зміна на inline-flex для вирівнювання контенту по центру */
+    justify-content: center;            /* Центрування тексту всередині кнопки */
+    align-items: center;                /* Центрування вертикально */
+    
+    /* Розміри кнопки */
+    padding: 20px;                      /* Внутрішні відступи (збільшені) */
+    width: 200px;                       /* Встановіть ширину кнопки */
+    height: 40px;                       /* Встановіть висоту кнопки */
+    
+    /* Стилі кнопки */
+    background-color: #1C6E5B;         /* Основний колір фону */
+    color: #FFFFFF;                     /* Колір тексту */
+    text-decoration: none;              /* Без підкреслення тексту */
+    border: 1px solid #FFFFFF;          /* Білий контур кнопки */
+    border-radius: 25px;                /* Заокруглення країв */
+    
+    /* Шрифт */
+    font-size: 1.5rem;                 /* Розмір шрифту (можна змінити за потреби) */
+    font-weight: bold;                  /* Жирний шрифт */
+    
+    /* Текст */
+    text-align: center;                 /* Вирівнювання тексту всередині кнопки */
+    
+    /* Анімації та переходи */
+    transition: background-color 0.3s ease; /* Плавний перехід для кольору фону */
+}
+
+.free-lesson .button:hover {
+    background-color: #333;
+}
+
+/* Стилі для іконок */
+.free-lesson .image-container img {
+    position: absolute;
+    width: 80px;
+    height: auto;
+}
+
+/* Позиціонування іконок */
+.icon-1 { bottom: -35%; right: 5%;}
+.icon-2 { top: -15%; left: -50px; }
+.icon-3 { bottom: 10%; right: -80px; }
+.icon-4 { bottom: -20%; left: -50px; }
+.icon-5 { top:-25%; right: 15em;}
+
+/*Адаптація Безкоштовного уроку*/
+@media (max-width: 768px) {
+    .free-lesson {
+        flex-direction: column; /* Вирівнюємо всі елементи вертикально */
+        align-items: center; /* Центруємо всі елементи по горизонталі */
+        padding: 20px; /* Додаємо відступи */
+    }
+
+    .free-lesson h1 {
+        font-size: 1.8rem; /* Зменшуємо розмір заголовка */
+        margin-bottom: 10px; /* Зменшуємо відступи */
+        text-align: center; /* Центруємо заголовок */
+    }
+
+    .free-lesson p {
+        text-align: center; /* Центруємо текст */
+        font-size: 1rem; /* Зменшуємо розмір шрифту */
+        margin: 10px 0; /* Зменшуємо відступи */
+    }
+
+    .free-lesson .image-container {
+        display: none; /* Сховати іконки на малих екранах */
+    }
+
+    .button-container {
+        width: 100%; /* Контейнер кнопок займає всю ширину */
+        justify-content: center; /* Центруємо кнопку */
+    }
+
+    .free-lesson .button {
+        width: 90%; /* Кнопка займає більшу частину контейнера */
+        margin-top: 10px; /* Відступ між текстом і кнопкою */
+    }
+}
+
+
+
+
+
+
+/*СТИЛІ ДЛЯ РІЗНІ НАПРЯМКИ*/
+.learning-directions {
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 80px;
+    background-color: #f9f9f9;
+}
+
+.learning-directions h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.learning-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+}
+
+.learning-item {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Додано тінь для об'єму */
+}
+
+.learning-item img {
+    width: 80px; /* Збільшений розмір зображення */
+    height: auto;
+    margin-right: 15px; /* Трохи менший відступ між картинкою і текстом */
+}
+
+.learning-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.learning-text h3 {
+    font-size: 25px; /* Зменшений розмір заголовка */
+    font-weight: 700;
+    margin-bottom: 5px; /* Менша відстань між h3 і p */
+    color: #333;
+}
+
+.learning-text p {
+    font-size: 15px; /* Зменшений розмір тексту в параграфі */
+    color: #666;
+    margin: 0; /* Відсутність додаткових відступів для параграфа */
+}
+
+/* Media queries для мобільних пристроїв */
+@media (max-width: 768px) {
+    .learning-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .learning-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .learning-item img {
+        margin-bottom: 10px; /* Менший відступ між картинкою і текстом на мобільних */
+        margin-right: 0;
+        width: 80px; /* Збільшений розмір зображення для мобільних */
+        height: 80px;
+    }
+    
+    .learning-text {
+        align-items: center;
+    }
+}
+
+
+
+
+/* СТИЛІ ДЛЯ СЕКЦІЇ ПЕРЕВАГ */
+.advantages {
+    padding: 0;
+    margin: 0;
+    background-color: #FFF8E0; /* Колір фону секції */
+    text-align: center;
+    width: 100%;
+}
+
+.advantages-header {
+    display: flex; /* Використовуємо Flexbox для вирівнювання */
+    justify-content: space-between; /* Простір між заголовком та текстом */
+    align-items: center; /* Вирівнюємо по верхньому краю */
+    margin-bottom: 40px; /* Відстань між заголовком та сіткою переваг */
+}
+
+.advantages h1 {    
+    font-size: 36px;
+    color: #333;
+    margin: 0; /* Відсутність відступів для заголовка */
+    text-align: center;
+    margin: 0 8em;
+}
+
+.advantages-content {
+    font-size: 18px; /* Розмір шрифту для опису */
+    color: #666; /* Колір тексту */
+    max-width: 50%; /* Обмеження ширини текстового блоку */
+    text-align: left;
+}
+
+.arrows-container {
+    display: flex; /* Вирівнювання стрілок в один ряд */
+    align-items: center; /* Вертикальне вирівнювання стрілок */
+    position: relative;
+}
+
+.arrow { 
+    margin: 0 5px; /* Відстань між стрілками */
+    width: 50px; /* Встановіть потрібний розмір стрілок */
+    height: auto; /* Автоматичне збереження пропорцій */
+    position: relative;
+}
+
+.arrow:nth-child(1) {
+    top: 20%; /* Зміщення першої стрілки вниз на 20% */
+}
+
+.arrow:nth-child(2) {
+    top: 0; /* Ніякого зміщення для другої стрілки */
+}
+
+.arrow:nth-child(3) {
+    top: -20%; /* Зміщення третьої стрілки вгору на 20% */
+}
+
+.line {
+    width: 28em; /* Встановіть ширину лінії */
+    height: 0.2em; /* Встановіть висоту лінії */
+    background-color: #333; /* Колір лінії */
+    margin-left: 10px; /* Відстань між стрілкою та лінією */
+    rotate: 90deg;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Адаптивна сітка */
+    gap: 40px; /* Відстань між колонками */
+    padding: 20px; /* Внутрішні відступи для сітки */
+    margin: 0 auto; /* Центрування сітки */
+    max-width: 1200px; /* Максимальна ширина сітки */
+}
+
+.advantage-item {
+    background-color: #fff; /* Колір фону для кожного блоку */
+    padding: 20px; /* Внутрішні відступи */
+    border-radius: 10px; /* Заокруглення країв */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тінь для ефекту об'єму */
+    text-align: left; /* Вирівнювання тексту */
+}
+
+.advantage-item h3 {
+    font-size: 24px; /* Розмір заголовка у блоці */
+    color: #333; /* Колір заголовка */
+    margin-bottom: 10px; /* Відстань між заголовком і списком */
+}
+
+.advantage-item ul {
+    list-style-type: disc; /* Додаємо стандартні маркери у вигляді кругів */
+    padding-left: 20px; /* Додаємо відступ зліва для списку */
+    margin: 0; /* Відсутність додаткових відступів для списку */
+
+    font-style: normal;
+    font-weight: 700;
+    font-weight: 400;
+}
+
+.advantage-item li {
+    font-size: 16px; /* Розмір тексту у списках */
+    color: #000000; /* Колір тексту */
+    margin-bottom: 5px; /* Відстань між пунктами списку */
+
+    font-style: normal;
+    font-weight: 700;
+    font-weight: 400;
+}
+
+.advantage-item p {
+    font-style: normal;
+    font-size: 16px;
+
+    color: #000000;
+}
+
+/* Додаткові стилі для покращення візуального сприйняття */
+.advantage-item img {
+    min-height: 75px;
+    width: 76px;
+    object-fit: contain;
+    text-align: left;
+}
+
+
+
+
+/* СТИЛІ ДЛЯ СЕКЦІЇ ЦІНА */
+.price-section {
+    display: flex;
+    justify-content: center; /* Центрування секції */
+    align-items: center; /* Вертикальне вирівнювання */
+    padding: 40px; /* Внутрішні відступи */
+    background: linear-gradient(90deg, #92BCCA 0%, #37798F 100%);
+    border-radius: 35px;
+    width: 70%;
+}
+
+.price-card {
+    background: #FFFFFF;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь для об'єму */
+    padding: 30px; /* Внутрішні відступи для картки */
+    margin: 0;
+    width: 90%;
+    height: auto;
+    text-align: center; /* Центрування тексту */
+    position: relative; /* Для абсолютного позиціонування елементів */
+    display: flex; /* Додаємо flex для картки */
+    flex-direction: row; /* Розташування елементів у колонку */
+}
+
+.price-card h2 {
+    font-size: 28px; /* Розмір заголовка */
+    margin: 0 0 10px; /* Відступи */
+}
+
+.subtitle {
+    font-size: 16px; /* Розмір підзаголовка */
+    color: #666; /* Колір тексту */
+    margin-bottom: 20px; /* Відступи */
+}
+
+.price {
+    font-size: 48px; /* Розмір ціни */
+    font-weight: bold; /* Жирний шрифт */
+    color: #333; /* Колір тексту */
+}
+
+.price span {
+    font-size: 24px; /* Розмір для гривень */
+    color: #666; /* Колір для підпису */
+}
+
+.per-lesson {
+    font-size: 18px; /* Розмір тексту для інформації про уроки */
+    color: #666; /* Колір тексту */
+    margin-top: 10px; /* Відступи */
+}
+
+.icon {
+    font-size: 30px; /* Розмір значка */
+    display: block; /* Для нового рядка */
+    margin: 20px auto; /* Центрування значка */
+}
+
+.additional-info {
+    font-size: 14px; /* Розмір додаткової інформації */
+    color: #999; /* Колір тексту */
+    margin-top: 10px; /* Відступи */
+}
+
+
+
+
+h2 {
+    font-size: 32px;
+    color: #333;
+    text-align: left;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Адаптивні стилі для модалок */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: auto;
+    text-align: left;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #4CAF50;
+}
+
+.modal input, .modal select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.modal button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.modal button:hover {
+    background-color: #45a049;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .button {
+        padding: 8px 16px;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+}
