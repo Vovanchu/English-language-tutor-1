@@ -8,35 +8,35 @@
   </head>
   <body>
 
-        <header>
-          <div class="logo">
-              <img src="./img/logo.png" alt="Логотип" />
-              <span class="logoIzi">izi</span>Bloom
-          </div>
-      
-          <nav class="hidden" id="nav"> <!-- Додано id="nav" -->
-              <ul>
-                  <li><a href="#learning-directions">Напрямки</a></li>
-                  <li><a href="#free-lesson">Пробний урок</a></li>
-                  <li><a href="#prices">Вартість</a></li>
-              </ul>
-          </nav>
-      
-          <div class="phone">
-              <a href="tel:0672903393">
-                  <div class="phone-icon">
-                      <img src="./img/phone.png" alt="Phone Icon" />
-                  </div>
-                  <span>067 290 33 93</span>
-              </a>
-          </div>
-      
-          <div class="hamburger" id="hamburger">
-              <div></div>
-              <div></div>
-              <div></div>
-          </div>
-       </header>
+    <header>
+      <div class="logo">
+          <img src="./img/logo.png" alt="Логотип" />
+          <span class="logoIzi">izi</span>Bloom
+      </div>
+  
+      <nav class="hidden" id="nav"> <!-- Додано id="nav" -->
+          <ul>
+              <li><a href="#learning-directions">Напрямки</a></li>
+              <li><a href="#free-lesson">Пробний урок</a></li>
+              <li><a href="#prices">Вартість</a></li>
+          </ul>
+      </nav>
+  
+      <div class="phone">
+          <a href="tel:0672903393">
+              <div class="phone-icon">
+                  <img src="./img/phone.png" alt="Phone Icon" />
+              </div>
+              <span>067 290 33 93</span>
+          </a>
+      </div>
+  
+      <div class="hamburger" id="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+      </div>
+   </header>
 
     <section class="language-banner">
       <div class="text-container">
@@ -47,13 +47,13 @@
         <p>Англійська - це цікаво, весело та продуктивно!</p>
       </div>
 
-      <div class="buttons-coadvantagesntainer">
-        <button class="button_language">Для діток</button>
-        <button class="button_language">Для дорослих</button>
+      <div class="buttons-container">
+        <div class="button_language">Для діток</div>
         <div class="icons">
           <img src="./img/children-icon.png" alt="Іконка для діток" />
-        </div>
-      </div>
+        </div>  
+        <div class="button_language">Для дорослих</div>
+      </div>      
     </section>
 
     <section id="free-lesson" class="free-lesson">
@@ -210,7 +210,7 @@
         <!-- Центрований заголовок та логотип -->
         <div class="header-content">
           <h2>Вартість уроків</h2>
-          <img src="./img/logo.png" alt="Логотип">
+          <img src="../img/logo.png" alt="Логотип">
         </div>
         
         <!-- Флексбокс з трьома колонками -->
@@ -236,13 +236,20 @@
           
         </div>
       </div>
-    </section>
-    
+    </section>  
 
-    <section id="about">
-      <a href="javascript:void(0);" class="button" onclick="openModal('become')"
-        >Хочу стати Репетитором</a
-      >
+    <!-- Питання секція -->
+    <section class="question-section">
+      <h2>Виникли питання?</h2>
+      <p>Пишіть нам і отримайте відповідь найближчим часом</p>
+      <button>Написати питання</button>
+    </section>
+
+    <!-- Вакансія викладача секція -->
+    <section class="job-section" id="about">
+      <h2>Вакансія викладача</h2>
+      <p>Якщо ви зацікавлені приєднатися до нашої команди та стати частиною професійного колективу, заповніть анкету</p>
+      <a href="javascript:void(0);" class="button" onclick="openModal('become')">Хочу стати Репетитором</a>
     </section>
 
     <!-- Modal Structure for "Шукаю Репетитора" -->
@@ -360,6 +367,6 @@
 
     <!-- Підключення JavaScript файлу -->
     <script src="./js/main.js"></script>
-    <script src="./js/tg_host.js"></script>
+    <script src="./telegram-bot-server/tg_host.js"></script>
   </body>
 </html>
