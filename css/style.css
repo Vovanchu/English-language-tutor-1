@@ -76,7 +76,7 @@ nav a {
     font-weight: bold; /* Жирний текст */
     padding: 10px 15px; /* Внутрішні відступи */
     border-radius: 4px; /* Закруглені кути */
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Плавні переходи */
+    transition: background-color 0.7s ease, color 0.3s ease, transform 0.5s ease; /* Плавні переходи */
 }
 
 /* Анімація при наведенні */
@@ -102,7 +102,6 @@ nav, .phone {
 .phone-icon {
     display: flex;           /* Вирівнюємо іконку телефону по центру */
     align-items: center;     /* Центруємо іконку по вертикалі */
-    transition: transform 0.3s ease; /* Додаємо перехід для трансформації */
 }
 
 .phone-icon img {
@@ -117,10 +116,12 @@ nav, .phone {
     align-items: center;    /* Центруємо текст та іконку по вертикалі */
     text-decoration: none;  /* Без підкреслення */
     color: #000;            /* Колір тексту */
+
+    transition: color 0.3s ease, scale 0.78s ease;
 }
 
 .phone a:hover {
-    color: #007BFF;         /* Зміна кольору тексту при наведенні */
+    color: #ffffff;         /* Зміна кольору тексту при наведенні */
 }
 
 .phone-icon:hover img {
@@ -129,7 +130,7 @@ nav, .phone {
 
 .phone span {
     margin-left: 0.5em;     /* Відстань між іконкою та номером */
-    transition: color 0.3s ease, transform 0.3s ease; /* Додаємо перехід для кольору та трансформації */
+    transition: color 0.7s ease, transform 0.5s ease; /* Додаємо перехід для кольору та трансформації */
 }
 
 /* Зміна кольору тексту номера телефону при наведенні */
@@ -305,8 +306,12 @@ nav, .phone {
     flex-direction: column;
     gap: 5px; /* Зменшений відступ між абзацами */
     width: 100%;
-    max-width: 550px; /* Контроль ширини контейнера */
+    max-width: 600px; /* Контроль ширини контейнера */
     text-align: center; /* Вирівнюємо текст по центру */
+}
+
+.text-container h2:nth-of-type(2) {
+    margin-bottom: 10px;
 }
 
 .language-banner h2 {
@@ -314,25 +319,21 @@ nav, .phone {
     font-weight: 700;
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 10px;
-    margin-left: -60px;
     color: #EEEFF5;
     max-width: 100%; /* Додаємо контроль ширини */
-    line-height: 0.6; /* Зменшений інтервал між рядками в заголовку */
     white-space: pre-wrap; /* Забезпечує перенесення тексту на новий рядок */
     text-align: center;
+    margin-bottom: -20px;
     
     letter-spacing: 3px;
 }
 
 .language-banner p {
     font-size: 1.2rem;
-    margin-bottom: 5px;
-    margin-left: 60px;
-    line-height: 1.3;
+    margin-bottom: -20px;
+    margin-left: 30px;
     font-style: normal;
     font-weight: 400;
-    line-height: 22px;
     text-align:start;   
 
     color: #FFFFFF;
@@ -340,75 +341,41 @@ nav, .phone {
 
 .buttons-container {
     display: flex; /* Включаємо Flexbox */
-    flex-direction: column; /* Вирівнюємо елементи по вертикалі */
-    align-items: flex-start; /* Вирівнюємо елементи по лівому краю */
-    position: relative; /* Задаємо відносне позиціонування для подальшого використання top/right */
-}
-
-.buttons-container button {
-    position: absolute; /* Додаємо позиціювання */
+    flex-direction: column;
+    align-items:flex-start;
+    position:relative;
+    width: 100%;
+    margin-left: -40px;
 }
 
 .button_language {
-    background-color: #fef4e6; /* Колір кнопок */
-    border: none;
+    background-color: #FFF8E0; /* Колір фону */
     padding: 10px 20px;
     border-radius: 25px;
-    font-size: 1rem;
+    font-size: 25px;
     font-weight: bold;
     color: #333;
-    cursor: pointer; /* Змінюємо на 'pointer' для вказівника курсора */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-    width: 100%; /* Задайте ширину 100% */
-    max-width: 10rem; /* Максимальна ширина кнопки */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Тінь для кнопок */
+    transition: none; /* Вимикаємо перехід */
+    width: 100%; /* Задаємо ширину 100% */
+    max-width: 12rem; /* Максимальна ширина */
     margin-bottom: 20px; /* Відступ між кнопками */
-    width: 10rem; /* Ширина кнопки */
+    text-align: center;
 }
 
-/* Стилі для кнопки при наведенні */
-.button_language:hover {
-    background-color: #92BCCA; /* Колір при наведенні */
-    transform: scale(1.05); /* Збільшуємо кнопку при наведенні */
+.button_language:first-of-type {
+    margin-top: 4em;
+    margin-left: 2em;
 }
 
-/* Стилі для кнопки після натискання */
-.button_language.active {
-    background-color: #ffcf93; /* Колір при натисканні */
-    animation: fadeBack 2s forwards; /* Анімація повернення кольору */
-}
-
-/* Анімація повернення до початкового кольору */
-@keyframes fadeBack {
-    0% {
-        background-color: #ffcf93; /* Колір при натисканні */
-    }
-    100% {
-        background-color: #fef4e6; /* Початковий колір */
-    }
-}
-
-.buttons-container button:first-child {
-    top: 4em; /* Відстань від верхньої частини контейнера */
-    right: 15em;
-    width: 10rem;
-    height: 3em;
-    border: 1px solid #FFF1EC;
-    border-radius: 70px;
-}
-
-.buttons-container button:nth-child(2) {
-    right: 5em;
-    top: 11em;
-    width: 10rem; 
-    height: 3em;
-    border: 1px solid #FFF1EC;
-    border-radius: 70px;
+.button_language:last-of-type {
+    margin-top: 1rem;
+    margin-left: 11em;
 }
 
 .icons {
-    margin-top: 20px;
-    margin-right: 100px; /* Відступ між кнопками та іконкою */
+    margin-top: -150px;
+    margin-left: 270px; /* Відступ між кнопками та іконкою */
 }
 
 .icons img {
@@ -417,159 +384,163 @@ nav, .phone {
     height: auto;
 }
 
-/* Media queries для великих планшетів */
-@media (max-width: 1024px) {
+/* Адаптація для великих екранів (понад 1200px) */
+@media (min-width: 1200px) {
     .language-banner {
-        height: auto; /* Висота адаптується під вміст */
-        padding: 20px; /* Додаємо відступи для кращого вигляду */
+        flex-direction: row; /* Розташування елементів по рядку */
     }
 
-    .language-banner h2 {
-        font-size: 1.5rem; /* Зменшуємо шрифт заголовка */
-    }
-
-    .language-banner p {
-        font-size: 1rem; /* Зменшуємо шрифт абзаців */
-        margin: 20px -30px 0 -10px; /* Зменшуємо відступи */
-        line-height: 1.4; /* Зменшуємо міжрядковий інтервал */
-    }
-
-    .button_language {
-        font-size: 0.9rem; /* Зменшуємо шрифт кнопок */
-        padding: 8px 15px; /* Зменшуємо відступи кнопок */
+    .icons {
+        margin-left: 300px;
+        width: 150px;
     }
 }
 
-/* Адаптивні стилі для екранів менше 768px */
-@media (max-width: 768px) {
+/* Адаптація для середніх екранів (від 768px до 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
     .language-banner {
-        flex-direction: column; /* Вирівнюємо всі елементи вертикально */
-        align-items: center; /* Центруємо всі елементи по горизонталі */
-        height: auto; /* Висота контейнера змінюється в залежності від вмісту */
-        padding: 0;
-        margin: 0;
+        flex-direction: column; /* Розташування елементів по колонці */
+        align-items: center;
         text-align: center;
-        margin-top: 80px; /* Встановіть відступ, щоб контент не перекривався заголовком */
-        transition: margin-top 0.3s ease; /* Додайте плавний перехід для margin-top */
     }
 
     .text-container {
-        text-align: center; /* Вирівнюємо текст по лівому краю */
-        margin: 0; /* Центруємо контейнер */
-        width: 100%; /* Контейнер займає всю доступну ширину */
-        display: flex;
-        align-items: stretch;
-        align-content: center;
-        flex-wrap: nowrap;
-        flex-direction: column;
-    }
-
-    .language-banner h2 {
-        font-size: 1.8rem; 
-        margin-bottom: -20px;
-        margin-left: 5px;
-        padding: 0;
-        width: 100%;
-        letter-spacing: 0px;
+        max-width: 100%;
         text-align: center;
-        line-height: normal;
+    }
+    
+    .text-container p{
         white-space: nowrap;
     }
 
-    .language-banner p {
-        font-size: 1.1rem;
-        margin: 30px -50px 0 -20px;
-        width: 100%; /* Текст займає всю ширину контейнера */
-        line-height: 1.5; /* Оптимальний міжрядковий інтервал */
-        letter-spacing: normal; /* Стандартний відступ між буквами */
-        text-align: left; /* Текст вирівнюється по лівому краю */
-        white-space: pre-wrap;
-    }
-
-    .buttons-container {
-        display: flex; /* Включаємо Flexbox */
-        flex-direction: column; /* Вирівнюємо елементи по вертикалі */
-        align-items: flex-start; /* Вирівнюємо елементи по лівому краю */
-        width: 100%; /* Контейнер кнопок займає всю ширину */
-        margin-top: 20px; /* Додаємо відступ зверху */
-    }
-
-    .button_language {
-        background-color: #fef4e6; /* Колір кнопок */
-        border: none;
-        border-radius: 25px;
-        font-size: 1rem;
-        font-weight: bold;
-        color: #333;
-        cursor: pointer; /* Змінюємо на 'pointer' для вказівника курсора */
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s ease;
-        width: 100%;
-        min-width: 5rem;
-        max-width: 45rem; /* Збільшено максимальну ширину кнопки */
-    }
-    
-    .buttons-container button {
-        position: absolute;
-        width: 100%; /* Кнопки займають всю ширину контейнера */
-        max-width: 12rem; /* Збільшено максимальну ширину кнопки */
-        padding: 10px 20px;
-        margin-bottom: 10px; /* Відступ між кнопками */
-    }
-
-    /* Стилі для кнопки при наведенні */
-    .button_language:hover {
-        background-color: #ffcf93; /* Колір при наведенні */
-        transform: scale(1.05); /* Збільшуємо кнопку при наведенні */
-    }
-    
-    .buttons-container button:first-child {
-        border: 1px solid #FFF1EC;
-        border-radius: 70px;
-        top: -15em;
-        left: 2em;
-        width: 90%; /* Кнопки займають всю ширину контейнера */
-        min-width: 5rem;
-        max-width: 45rem; /* Збільшено максимальну ширину кнопки */
-    }
-    
-    .buttons-container button:nth-child(2) {
-        border: 1px solid #FFF1EC;
-        border-radius: 70px;
-        top: -10em;
-        left: 2em;
-        width: 90%; /* Кнопки займають всю ширину контейнера */
-        min-width: 5rem;
-        max-width: 45rem; /* Збільшено максимальну ширину кнопки */
-    }    
-
+    /* Приховуємо іконку на середніх екранах */
     .icons {
-        display: none; /* Прибираємо іконки на мобільних екранах */
+        display: none;
+    }
+    
+    .buttons-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /* Центруємо кнопки без додаткових margin */
+    .button_language {
+        margin: 1em 0; /* Відступ між кнопками зверху і знизу */
+        min-width: 10em; /* Мінімальна ширина */
+        max-width: 20em; /* Максимальна ширина */
+        flex-grow: 1;
+        text-align: center; /* Центруємо текст всередині кнопки */
+    }
+
+    .button_language:last-of-type {
+        margin: 1em 0 1em 2em;
+        text-align: center; /* Центруємо текст всередині кнопки */
     }
 }
 
-/* Media queries для дуже малих екранів */
+/* Адаптація для маленьких екранів (до 767px) */
+@media (max-width: 767px) {
+    .language-banner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text-container {
+        width: 100%;
+    }
+
+    .text-container h2{
+        font-size: 1.7rem;
+    }
+
+    .text-container p{
+        font-size: 16px;
+    }
+
+    /* Приховуємо іконку на дуже маленьких екранах */
+    .icons {
+        display: none;
+    }
+
+    .buttons-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /* Центруємо кнопки без додаткових margin */
+    .button_language {
+        margin: 1em 0; /* Відступ між кнопками зверху і знизу */
+        max-width: 13em; /* Максимальна ширина */
+        flex-grow: 1;
+        text-align: center; /* Центруємо текст всередині кнопки */
+    }
+
+    .button_language:last-of-type {
+        margin: 1em 0 1em 2em;
+        text-align: center; /* Центруємо текст всередині кнопки */
+    }
+}
+
+/* Адаптація для дуже маленьких екранів (до 480px) */
 @media (max-width: 480px) {
     .language-banner {
-        height: auto; /* Висота адаптується під вміст */
-        padding: 10px; /* Менші відступи для компактності */
-        margin-top: 60px; /* Менший відступ зверху */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px; /* Зменшений внутрішній відступ */
     }
 
-    .language-banner h2 {
-        font-size: 1.2rem; /* Додаткове зменшення шрифту заголовка */
-        margin-bottom: -10px; /* Зменшуємо відступ знизу */
+    .text-container {
+        width: 100%;
+        padding: 0 10px; /* Додаємо відступи для тексту */
     }
 
-    .language-banner p {
-        font-size: 0.9rem; /* Зменшення шрифту для абзаців */
-        margin: 20px -20px 0 -10px; /* Зменшені відступи */
-        line-height: 1.3; /* Зменшений міжрядковий інтервал */
+    /* Приховуємо іконку */
+    .icons {
+        display: none;
+    }
+
+    /* Кнопки займають всю ширину, під текстом */
+    .buttons-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
 
     .button_language {
-        font-size: 0.8rem; /* Зменшення шрифту кнопок */
-        padding: 5px 10px; /* Зменшені відступи кнопок */
+        width: 100%;
+        min-width: 5em;
+        max-width: 10em;
+        margin: 5px 0; /* Менший відступ між кнопками */
+        font-size: 1rem; /* Зменшення розміру шрифту для кнопок */
+        padding: 8px 15px; /* Зменшення внутрішніх відступів */
+        text-align: center;
+    }
+
+    .button_language:first-of-type {
+        margin-top: 1em;
+        text-align: center;
+    }
+
+    .button_language:last-of-type {
+        margin: 1em 0 1em 2em;
+        text-align: center;
+    }
+
+    .language-banner h2 {
+        font-size: 1.2rem; /* Зменшуємо заголовки */
+    }
+
+    .language-banner p {
+        font-size: 0.8rem; /* Зменшуємо розмір шрифту для параграфів */
+        margin: 0; /* Зменшений відступ між абзацами */
+        margin-left: -15px;
     }
 }
 
@@ -663,11 +634,13 @@ nav, .phone {
     text-align: center;                 /* Вирівнювання тексту всередині кнопки */
     
     /* Анімації та переходи */
-    transition: background-color 0.3s ease; /* Плавний перехід для кольору фону */
+    transition: background-color 0.7s ease, color 0.3s ease, font-size 0.78s ease; 
 }
 
 .free-lesson .button:hover {
-    background-color: #333;
+    background-color: #92BCCA;
+    color: #000;
+    font-size: 1.7em;
 }
 
 /* Стилі для іконок */
@@ -688,6 +661,7 @@ nav, .phone {
 @media (max-width: 1024px) {
     .free-lesson {
         padding: 30px; /* Збільшені відступи для кращого вигляду */
+        color: #000000;
     }
 
     .free-lesson h1 {
@@ -706,6 +680,7 @@ nav, .phone {
 
     .free-lesson .button {
         width: 80%; /* Кнопка займає більшу частину контейнера */
+        transition: none; 
     }
 }
 
@@ -718,14 +693,15 @@ nav, .phone {
     }
 
     .free-lesson h1 {
-        font-size: 1.8rem; /* Зменшуємо розмір заголовка */
+        font-size: 1.5em; /* Зменшуємо розмір заголовка */
         margin-bottom: 10px; /* Зменшуємо відступи */
         text-align: center; /* Центруємо заголовок */
+        white-space: nowrap;
     }
 
     .free-lesson p {
-        text-align: center; /* Центруємо текст */
-        font-size: 1rem; /* Зменшуємо розмір шрифту */
+        text-align: left; /* Центруємо текст */
+        font-size: 0.9em; /* Зменшуємо розмір шрифту */
         margin: 10px 0; /* Зменшуємо відступи */
     }
 
@@ -735,6 +711,7 @@ nav, .phone {
 
     .button-container {
         width: 100%; /* Контейнер кнопок займає всю ширину */
+        max-width: 20em;
         justify-content: center; /* Центруємо кнопку */
     }
 
@@ -751,7 +728,7 @@ nav, .phone {
     }
 
     .free-lesson h1 {
-        font-size: 1.4rem; /* Додаткове зменшення шрифту заголовка */
+        font-size: 1.2rem; /* Додаткове зменшення шрифту заголовка */
     }
 
     .free-lesson p {
@@ -759,8 +736,15 @@ nav, .phone {
         margin: 10px 0; /* Зменшені відступи */
     }
 
+    .button-container {
+        width: 100%; /* Контейнер кнопок займає всю ширину */
+        max-width: 13em;
+        justify-content: center; /* Центруємо кнопку */
+    }
+
     .free-lesson .button {
         width: 100%; /* Кнопка займає всю ширину контейнера */
+        font-size: 1.3em;
     }
 }
 
@@ -802,13 +786,14 @@ nav, .phone {
     border-top: 2px solid #ccc;
     border-bottom: 2px solid #ccc;
     text-align: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Додано тінь для об'єму */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .learning-item img {
     width: 80px; /* Збільшений розмір зображення */
     height: auto;
     margin-right: 15px; /* Трохи менший відступ між картинкою і текстом */
+    border-radius: 20px;
 }
 
 .learning-text {
@@ -854,23 +839,23 @@ nav, .phone {
 /* Media queries для мобільних пристроїв */
 @media (max-width: 768px) {
     .learning-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Один стовпець */
     }
     
     .learning-item {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row; /* Залишаємо горизонтальне вирівнювання */
+        text-align: left; /* Вирівнювання тексту зліва */
     }
     
     .learning-item img {
-        margin-bottom: 10px; /* Менший відступ між картинкою і текстом на мобільних */
-        margin-right: 0;
-        width: 80px; /* Збільшений розмір зображення для мобільних */
-        height: 80px;
+        margin-bottom: 0; /* Скидання нижнього відступу */
+        margin-right: 10px; /* Відступ праворуч від зображення */
+        width: 80px; /* Зменшений розмір зображення для мобільних */
+        height: auto; /* Автоматичне збереження пропорцій */
     }
     
     .learning-text {
-        align-items: center;
+        align-items: flex-start; /* Вирівнюємо текст на верхній край */
     }
 }
 
@@ -881,20 +866,35 @@ nav, .phone {
     }
     
     .learning-item {
-        flex-direction: column; /* Вертикальне вирівнювання елементів */
-        text-align: center; /* Центруємо текст */
+        flex-direction: row; /* Горизонтальне вирівнювання елементів */
+        text-align: left; /* Вирівнювання тексту зліва */
     }
     
     .learning-item img {
-        margin-bottom: 5px; /* Зменшений відступ між картинкою і текстом на дуже малих екранах */
+        margin-bottom: 0; /* Скидання нижнього відступу */
+        margin-right: 5px; /* Відступ праворуч від зображення */
         width: 70px; /* Зменшений розмір зображення для дуже малих екранів */
-        height: 70px; /* Зберігаємо пропорції */
+        height: auto; /* Автоматичне збереження пропорцій */
     }
     
     .learning-text {
-        align-items: center; /* Центруємо текст */
+        align-items: flex-start; /* Вирівнюємо текст на верхній край */
+    }
+
+    .learning-text h3 {
+        font-size: 1.3em; /* Зменшений розмір заголовка */
+        font-weight: 700;
+        margin-bottom: 5px; /* Менша відстань між h3 і p */
+        color: #333;
+    }
+
+    .learning-text p {
+        font-size: 0.8em; /* Зменшений розмір тексту в параграфі */
+        color: #666;
+        margin: 0; /* Відсутність додаткових відступів для параграфа */
     }
 }
+
 
 
 
@@ -1023,7 +1023,6 @@ nav, .phone {
 }
 
 /* Адаптивність для секції переваг */
-/* Медіа-запити для планшетів */
 @media (max-width: 1024px) {
     .advantages-header {
         flex-direction: column; /* Заголовок і стрілки в колонку */
@@ -1193,7 +1192,7 @@ nav, .phone {
 .price-card {
     background: #FFFFFF;
     border-radius: 40px;
-    width: 85%;
+    width: 80%;
     padding: 30px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -1241,12 +1240,15 @@ nav, .phone {
     font-style: normal;
 }
 
+.subtitle:first-of-type{
+    margin-bottom: -20px;
+}
+
 /* Вирівнювання блоку з ціною */
 .price-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: -50px;
 }
 
 /* Стиль для ціни */
@@ -1305,8 +1307,9 @@ nav, .phone {
     }
 
     .price-card {
-        width: 100%; /* Повна ширина на планшетах */
+        width: 80%; /* Повна ширина на планшетах */
         padding: 20px; /* Зменшити відступи всередині картки */
+        margin: 20px 0;
     }
 
     .price-details {
@@ -1321,6 +1324,14 @@ nav, .phone {
         margin-bottom: 10px; /* Відступ між колонками */
     }
 
+    .subtitle {
+        color: #333;
+    
+        font-size: 1.5em;
+        letter-spacing: 2px;
+        line-height: 25px;
+    }
+
     .price {
         font-size: 32px; /* Зменшити розмір шрифту для планшетів */
     }
@@ -1329,16 +1340,14 @@ nav, .phone {
         font-size: 20px; /* Зменшити розмір шрифту для гривень */
     }
 
-    .subtitle {
-        font-size: 16px; /* Зменшити розмір шрифту для підзаголовків */
-    }
-
     .per-lesson {
         font-size: 16px; /* Зменшити розмір шрифту для "за урок" */
+        white-space: nowrap;
     }
 
     .additional-info {
-        font-size: 12px; /* Зменшити розмір шрифту для додаткової інформації */
+        width: 30%;
+        font-size: 1.4em; /* Зменшити розмір шрифту для додаткової інформації */
     }
 }
 
@@ -1350,8 +1359,9 @@ nav, .phone {
     }
 
     .price-card {
-        width: 100%; /* Повна ширина на мобільних пристроях */
+        width: 80%; /* Повна ширина на мобільних пристроях */
         padding: 20px; /* Зменшити відступи всередині картки */
+        margin: 20px 0;
     }
 
     .price-details {
@@ -1367,7 +1377,7 @@ nav, .phone {
     }
 
     .price {
-        font-size: 32px; /* Зменшити розмір шрифту для мобільних */
+        font-size: 2.5em; /* Зменшити розмір шрифту для мобільних */
     }
 
     .price span {
@@ -1379,7 +1389,7 @@ nav, .phone {
     
         font-size: 20px;
         letter-spacing: 2px;
-        line-height: 0px;
+        line-height: 20px;
     }
 
     .per-lesson {
@@ -1387,7 +1397,9 @@ nav, .phone {
     }
 
     .additional-info {
-        font-size: 12px; /* Зменшити розмір шрифту для додаткової інформації */
+        width: 30%;
+
+        font-size: 1.2em; /* Зменшити розмір шрифту для додаткової інформації */
     }
 }
 
@@ -1399,17 +1411,19 @@ nav, .phone {
     }
 
     .price-card {
-        width: 100%; /* Повна ширина на дуже малих пристроях */
+        width: 80%; /* Повна ширина на дуже малих пристроях */
         padding: 15px; /* Зменшити відступи всередині картки */
+        margin: 20px 0;
     }
 
     .header-content h2{
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .header-content img{
-        width: 60px;
+        width: 40px;
         height: auto;
+        margin-top: -15px;
     }
 
 
@@ -1431,7 +1445,7 @@ nav, .phone {
     
         font-size: 20px;
         letter-spacing: 2px;
-        line-height: 0px;
+        line-height: 20px;
     }
 
     .price-container{
@@ -1459,21 +1473,181 @@ nav, .phone {
         margin-bottom: 5px;
         margin-left: -30px;
     }
-    
-    .subtitle {
-        font-size: 14px; /* Зменшити розмір шрифту для підзаголовків */
-    }
 
     .per-lesson {
         font-size: 14px; /* Зменшити розмір шрифту для "за урок" */
     }
 
     .additional-info {
-        font-size: 20px; /* Зменшити розмір шрифту для додаткової інформації */
+        width: 30%;
+        font-size: 0.8em; /* Зменшити розмір шрифту для додаткової інформації */
     }
 }
 
 
+
+
+
+/* СТИЛІ ДЛЯ ПИТАННЯ */
+.question-section {
+    background-color: #276c56;
+    color: #FFFFFF;
+}
+
+.question-section h2 {
+    color: #FFFFFF;
+}
+
+.question-section p {
+    color: #FFFFFF;
+}
+
+.question-section button {
+    background-color: #5ca193;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+}
+
+/* Адаптація для всіх екранів */
+@media (max-width: 1024px) {
+    .question-section {
+        padding: 30px 15px;
+    }
+
+    .question-section h2 {
+        font-size: 1.8em;
+    }
+
+    .question-section p {
+        font-size: 1.2em;
+    }
+
+    .question-section button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .question-section {
+        padding: 25px 10px;
+    }
+
+    .question-section h2 {
+        font-size: 1.6em;
+    }
+
+    .question-section p {
+        font-size: 1.1em;
+    }
+
+    .question-section button {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .question-section {
+        padding: 20px 5px;
+    }
+
+    .question-section h2 {
+        font-size: 1.4em;
+    }
+
+    .question-section p {
+        font-size: 1em;
+    }
+
+    .question-section button {
+        padding: 8px 12px;
+        font-size: 0.85em;
+    }
+}
+
+
+
+
+
+
+/* СТИЛІ ДЛЯ ВАКАНСІЯ ВИКЛАДАЧА */
+.job-section {
+    background-color: #f4f4e9;
+    color: black;
+}
+
+.job-section button {
+    background-color: #276c56;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Адаптація для всіх екранів */
+@media (max-width: 1024px) {
+    .job-section {
+        padding: 30px 15px;
+    }
+
+    .job-section h2 {
+        font-size: 1.8em;
+    }
+
+    .job-section p {
+        font-size: 1.2em;
+    }
+
+    .job-section button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .job-section {
+        padding: 25px 10px;
+    }
+
+    .job-section h2 {
+        font-size: 1.6em;
+    }
+
+    .job-section p {
+        font-size: 1.1em;
+    }
+
+    .job-section button {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .job-section {
+        padding: 20px 5px;
+    }
+
+    .job-section h2 {
+        font-size: 1.4em;
+    }
+
+    .job-section p {
+        font-size: 1em;
+    }
+
+    .job-section button {
+        padding: 8px 12px;
+        font-size: 0.85em;
+    }
+}
 
 
 h2 {
