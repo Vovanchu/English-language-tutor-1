@@ -10,7 +10,7 @@
 
     <header>
       <div class="logo">
-          <img src="./img/logo.png" alt="Логотип" />
+          <img src="./img/logo.png" alt="iziBloom Logo" />
           <span class="logoIzi">izi</span>Bloom
       </div>
   
@@ -25,7 +25,7 @@
       <div class="phone">
           <a href="tel:0672903393">
               <div class="phone-icon">
-                  <img src="./img/phone.png" alt="Phone Icon" />
+                  <img src="./img/phone-header.png" alt="Phone Icon" />
               </div>
               <span>067 290 33 93</span>
           </a>
@@ -210,7 +210,7 @@
         <!-- Центрований заголовок та логотип -->
         <div class="header-content">
           <h2>Вартість уроків</h2>
-          <img src="../img/logo.png" alt="Логотип">
+          <img src="./img/logo.png" alt="iziBloom Logo">
         </div>
         
         <!-- Флексбокс з трьома колонками -->
@@ -248,12 +248,46 @@
     </section>    
 
     <!-- Вакансія викладача секція -->
-    <section class="job-section">
+    <section class="job-section" id="job-search">
       <h2>Вакансія викладача</h2>
       <p>Якщо ви зацікавлені приєднатися до нашої команди та стати </p>
       <p>частиною професійного колективу, заповніть анкету</p>
       <a href="javascript:void(0);" class="button" onclick="openModal('become')">Заповнити</a>
     </section>
+
+    <!-- Підвал -->
+    <footer class="footer-section">
+      <div class="footer-content">
+          <div class="footer-logo">
+              <img src="./img/logo.png" alt="iziBloom Logo">
+              <span class="logo-izi">izi</span>
+              <span class="logo-bloom">Bloom</span>
+          </div>
+  
+          <div class="footer-links">
+              <h3>Помощь</h3>
+              <a href="#learning-directions">Напрямки</a>
+              <a href="#prices">Вартість</a>
+              <a href="#free-lesson">Пробний урок</a>
+              <a href="#job-search">Вакансія для викладачів</a>
+          </div>
+
+          <div class="footer-social">
+            <h3>Зв'язок з нами</h3>
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+          </div>
+  
+          <div class="footer-contact">
+              <span class="phone-icon">
+                  <img src="./img/phone-footer.png" alt="phone footer">
+              </span>
+              <a href="tel:0672903393">+38 (067) 290 33 93</a>
+          </div>
+      </div>
+  </footer>
+  
 
     <!-- Modal Structure for "Шукаю Репетитора" -->
     <div id="searchModal" class="modal" style="display: none">
@@ -363,10 +397,6 @@
         </form>
       </div>
     </div>
-
-    <footer id="contact">
-      <p>Контактна інформація: +380501234567, email: info@tutorservice.ua</p>
-    </footer>
 
     <!-- Підключення JavaScript файлу -->
     <script src="./js/main.js"></script>
